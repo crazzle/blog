@@ -1,0 +1,89 @@
+baseurl = "http://plainpixels.work/"
+title = "Plainpixels"
+copyright = "&copy; 2017 Mark Keinhörster"
+theme = "hugo-academic"
+enableEmoji = true
+footnotereturnlinkcontents = "<sup>^</sup>"
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+
+[blackfriday]
+  hrefTargetBlank = true
+
+[params]
+  name = "Mark Keinhörster"
+  role = "Software Engineer and Data Wizard"
+  organization = "@Codecentric"
+  organization_url = ""
+  gravatar = false  # Get your avatar from Gravatar.com? (true/false)
+  avatar = "avatar.jpg"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
+  date_format = "Jan 2, 2006"
+  math = false
+  highlight = true
+  highlight_languages = ["go", "scala", "java", "python", "r"]
+  highlight_style = "github"
+  highlight_version = "9.9.0"
+  sharing = false
+  publication_types = [
+    'Working Paper',  # 0
+    'Patent'  # 1
+  ]
+
+  [[params.social]]
+    icon = "github"
+    icon_pack = "fa"
+    link = "//github.com/crazzle"
+    
+  [[params.social]]
+    icon = "twitter"
+    icon_pack = "fa"
+    link = "//twitter.com/kein_mark"
+    
+  [[params.social]]
+    icon = "linkedin"
+    icon_pack = "fa"
+    link = "https://linkedin.com/in/mark-keinhörster-1632a2109/"
+    
+  [[params.social]]
+    icon = "xing"
+    icon_pack = "fa"
+    link = "https://xing.com/profile/Mark_Keinhoerster?sc_o=mxb_p"
+
+
+  [[menu.main]]
+    name = "Home"
+    url = "#posts"
+    weight = 1
+    
+  [[menu.main]]
+    name = "Projects"
+    url = "#projects"
+    weight = 2
+    
+  [[menu.main]]
+    name = "Talks"
+    url = "#talks"
+    weight = 3
+  
+  [[menu.main]]
+    name = "Lectures"
+    url = "#lectures"
+    weight = 4
+  
+  [[menu.main]]
+    name = "Publications"
+    url = "#publications"
+    weight = 5
+  
+  [[menu.main]]
+    name = "About"
+    url = "#about"
+    weight = 6
+
+  [taxonomies]
+    tag = "tags"
+    category = "categories"
+    publication_type = "publication_types"
+  
+  [languages.en]
+    languageCode = "en-us"

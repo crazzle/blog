@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Recent &amp; Upcoming Talks on Plainpixels</title>
+    <link>/talk/</link>
+    <description>Recent content in Recent &amp; Upcoming Talks on Plainpixels</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 Mark Keinhörster</copyright>
+    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/talk/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Data Analytics End-2-End</title>
+      <link>/talk/efellows-itday2016/</link>
+      <pubDate>Thu, 10 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/talk/efellows-itday2016/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Aufbau einer End-2-End Architektur zur Datenanalyse</title>
+      <link>/talk/data2day2016/</link>
+      <pubDate>Wed, 05 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/talk/data2day2016/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Docker und Node.js – Von der Entwicklung bis zum Deployment</title>
+      <link>/talk/pottjs2016/</link>
+      <pubDate>Wed, 07 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/talk/pottjs2016/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Decentralized Generation – Requirements on IT-Technology</title>
+      <link>/talk/vgb2014/</link>
+      <pubDate>Wed, 26 Nov 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/talk/vgb2014/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Plainpixels on Plainpixels</title>
+    <link>/</link>
+    <description>Recent content in Plainpixels on Plainpixels</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 Mark Keinhörster</copyright>
+    <lastBuildDate>Wed, 20 Apr 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Blockies</title>
+      <link>/project/blockies/</link>
+      <pubDate>Fri, 15 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/project/blockies/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Perceptron</title>
+      <link>/project/perceptron/</link>
+      <pubDate>Fri, 15 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/project/perceptron/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PyPoSim</title>
+      <link>/project/pyposim/</link>
+      <pubDate>Fri, 15 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/project/pyposim/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Stask</title>
+      <link>/project/stask/</link>
+      <pubDate>Fri, 15 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/project/stask/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The First Post</title>
+      <link>/post/2017-09-14-the-first-post/</link>
+      <pubDate>Thu, 14 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2017-09-14-the-first-post/</guid>
+      <description>&lt;p&gt;After a long time this website is finally ready to be published.
+It will mainly be used to as a platform to publish
+&lt;code&gt;apps&lt;/code&gt;, &lt;code&gt;code&lt;/code&gt;, &lt;code&gt;thoughts&lt;/code&gt; and &lt;code&gt;ideas&lt;/code&gt; around &lt;code&gt;software development&lt;/code&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Data Analytics End-2-End</title>
+      <link>/talk/efellows-itday2016/</link>
+      <pubDate>Thu, 10 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/talk/efellows-itday2016/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Aufbau einer End-2-End Architektur zur Datenanalyse</title>
+      <link>/talk/data2day2016/</link>
+      <pubDate>Wed, 05 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/talk/data2day2016/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Docker und Node.js – Von der Entwicklung bis zum Deployment</title>
+      <link>/talk/pottjs2016/</link>
+      <pubDate>Wed, 07 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/talk/pottjs2016/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Decentralized Generation – Requirements on IT-Technology</title>
+      <link>/talk/vgb2014/</link>
+      <pubDate>Wed, 26 Nov 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/talk/vgb2014/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Automatic Genre Determination of Web Content</title>
+      <link>/publication/genre-determination-ml/</link>
+      <pubDate>Wed, 04 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/genre-determination-ml/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Maschinelles Lernen zur Erkennung von SMS-Spam</title>
+      <link>/publication/sms-spam-ml/</link>
+      <pubDate>Tue, 24 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/sms-spam-ml/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
