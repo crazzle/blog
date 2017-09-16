@@ -1,3 +1,4 @@
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 baseurl = "http://plainpixels.work/"
 title = "Plainpixels"
 copyright = "&copy; 2017 Mark Keinhörster"
