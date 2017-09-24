@@ -8,6 +8,8 @@ footnotereturnlinkcontents = "<sup>^</sup>"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
 
+googleAnalytics = "UA-106938736-1"
+
 [blackfriday]
   hrefTargetBlank = true
 
