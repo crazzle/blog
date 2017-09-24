@@ -1,5 +1,5 @@
-ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 baseurl = "http://plainpixels.work/"
+googleAnalytics = "UA-106938736-1"
 title = "Plainpixels"
 copyright = "&copy; 2017 Mark Keinhörster"
 theme = "hugo-academic"
@@ -8,7 +8,7 @@ footnotereturnlinkcontents = "<sup>^</sup>"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
 
-googleAnalytics = "UA-106938736-1"
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 [blackfriday]
   hrefTargetBlank = true
