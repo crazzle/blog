@@ -17,7 +17,7 @@ The code can be found in the [PyPoSim Github Repo](https://github.com/crazzle/Py
 Using this project, let's generate some timeseries data, store it to a CSV and visualize it
 like real systems would visualize it!
 
-# The basics
+## The basics
 
 The first thing to do is to start PyPoSim.
 
@@ -43,7 +43,7 @@ us some more detailed information about it:
 - `capacity` is the power-level that this plant is able to generate at max. The output fluctuates around this value.
 - `ramp` is the factor the plant can move up and down to certain outputs per second in KW
 
-# Pythonize the basics
+## Pythonize the basics
 
 The masterdata information is important to check the behaviour of the plant. As we use the generated CSV for the visualization
 we can hardcode the important things.
@@ -53,7 +53,7 @@ capacity = 100
 fluctuation = 10.0/100.0
 ```
 
-# Read the CSV
+## Read the CSV
 
 After a couple of minutes playing around with the UI and requesting the plant 
 to changes it's output (`dispatch`), the following [CSV](/post/2017-09-17-data-generation-with-pyposim/telemetry.csv) 
@@ -81,7 +81,7 @@ df = df.set_index(pd.DatetimeIndex(df['ts']).round("1S"))
 ts = df.drop(['ts'], axis=1)
 ```
 
-# Filter for the right information
+## Filter for the right information
 
 From now on the dataframe can be wrangled until everything is seperated nicely.
 The CSV schema is quite generic but narrow which leads to a lot of rows. From there
@@ -108,7 +108,7 @@ be exceeded either if a plant is not targeting it's setpoint correctly by whatev
 or it is not as accurate as assumed or parts are broken which lead to certain
 patterns in output generation or or or...
 
-# Let's see what comes out
+## Let's see what comes out
 
 `Bokeh` will be used to generate a plot that shows us the plant behaviour over time.
 For the we first install `bokeh`:
@@ -157,7 +157,7 @@ Furthermore we can see how the power output follows the given setpoint and stays
 boundaries (which makes sense as PyPoSim has currently no misbehaviour programmed in it's model).
 
 
-# Next steps
+## Next steps
 
 From that point the are a variety of steps to go further. Either the `Simpleplant` model in 
 PyPoSim can be extended to simulate misbehaviour that has to be detected or using Kafka
