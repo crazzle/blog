@@ -90,7 +90,7 @@ individual timeseries.
 
 PyPoSim generates datapoints (metric + timestamp) for 3 metrics, `power_output`
 `setpoint` and `dispatch`. As the name infers, `power_output`is the currently generated power.
-`setpoint`is the internal target value that the plant is supposed to genrate 
+`setpoint`is the internal target value that the plant is supposed to generate 
 as accurately as possible given the fluctuation rate. `dispatch`is an event which sets a 
 new setpoint
 
@@ -111,13 +111,16 @@ patterns in output generation or or or...
 ## Let's see what comes out
 
 `Bokeh` will be used to generate a plot that shows us the plant behaviour over time.
-For the we first install `bokeh`:
+
+First of all `bokeh` has to be installed:
 
 ```bash
 pip install bokeh
 ```
 
-After that the plot can be created. Each timeseries gets added to it.
+After that the plot can be created and each dataframe can be added to it.
+`power_output`and `setpoint`will be added as lines, the discrete `dispatch` events
+are added as scatters.
 
 ```python
 from bokeh.plotting import figure, show
@@ -147,7 +150,7 @@ p.grid.ticker = SingleIntervalTicker(interval=25)
 show(p)
 ```
 
-What we can see is that the plant received 4 dispatch commands the the visualized timeframe.
+What we can see is that the plant received 4 dispatch commands within the visualized timeframe.
 The first one demands it to ramp to 50kw, the second one to 25kw, then 75kw and at the end back 
 to 100kw.
 
