@@ -15,7 +15,7 @@ of a powerplant.
 The code can be found in the [PyPoSim Github Repo](https://github.com/crazzle/PyPoSim)
 
 Using this project, let's generate some timeseries data, store it to a CSV and visualize it
-like real systems would visualize it!
+like real systems would visualize it!<!--more-->
 
 ## The basics
 
