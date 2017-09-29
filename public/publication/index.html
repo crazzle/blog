@@ -27,6 +27,19 @@
   
 
   
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-106938736-1', 'auto');
+      ga('require', 'eventTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('require', 'urlChangeTracker');
+      ga('send', 'pageview');
+    </script>
+    <script async src="//www.google-analytics.com/analytics.js"></script>
+    
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+    
+  
 
   <link rel="alternate" href="/publication/index.xml" type="application/rss+xml" title="Plainpixels">
   <link rel="feed" href="/publication/index.xml" type="application/rss+xml" title="Plainpixels">
@@ -155,9 +168,19 @@
 
       
 
+      
+      
+        
+        
+      
+        
+        
+      
+
       <p>
         Filter by type:
-        <select class="pub-filters-select">
+
+        <select class="pub-filters pubtype-select" data-filter-group="pubtype">
           <option value="*">All</option>
           
           <option value=".pubtype-0">
@@ -166,6 +189,16 @@
           
           <option value=".pubtype-1">
             Patent
+          </option>
+          
+        </select>
+
+        <select class="pub-filters" data-filter-group="year">
+          <option value="*">All</option>
+          
+          
+          <option value=".year-2013">
+            2013
           </option>
           
         </select>
@@ -178,10 +211,12 @@
           
         
 
-        <div class="grid-sizer col-md-12 isotope-item pubtype-1">
-          <i class="fa fa-file-text-o" aria-hidden="true"
-             style="color:#03396c;font-size:80%;padding-top:6px; padding-right: 10px;"></i>Automatic Genre Determination of Web Content
-          <p>
+        <div class="grid-sizer col-md-12 isotope-item pubtype-1 year-2013">
+          
+            <div class="pub-list-item" style="margin-bottom: 1rem" itemscope itemtype="http://schema.org/CreativeWork">
+  <i class="fa fa-file-text-o pub-icon" aria-hidden="true"></i>
+  <span itemprop="name">Automatic Genre Determination of Web Content</span>
+  <p>
 
 
 
@@ -201,6 +236,9 @@
 
 
 </p>
+</div>
+
+          
         </div>
 
         
@@ -209,10 +247,12 @@
           
         
 
-        <div class="grid-sizer col-md-12 isotope-item pubtype-0">
-          <i class="fa fa-file-text-o" aria-hidden="true"
-             style="color:#03396c;font-size:80%;padding-top:6px; padding-right: 10px;"></i>Maschinelles Lernen zur Erkennung von SMS-Spam
-          <p>
+        <div class="grid-sizer col-md-12 isotope-item pubtype-0 year-2013">
+          
+            <div class="pub-list-item" style="margin-bottom: 1rem" itemscope itemtype="http://schema.org/CreativeWork">
+  <i class="fa fa-file-text-o pub-icon" aria-hidden="true"></i>
+  <span itemprop="name">Maschinelles Lernen zur Erkennung von SMS-Spam</span>
+  <p>
 
 
 
@@ -232,6 +272,9 @@
 
 
 </p>
+</div>
+
+          
         </div>
 
         

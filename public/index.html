@@ -32,6 +32,19 @@
   
 
   
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-106938736-1', 'auto');
+      ga('require', 'eventTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('require', 'urlChangeTracker');
+      ga('send', 'pageview');
+    </script>
+    <script async src="//www.google-analytics.com/analytics.js"></script>
+    
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+    
+  
 
   <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Plainpixels">
   <link rel="feed" href="/index.xml" type="application/rss+xml" title="Plainpixels">
@@ -186,6 +199,88 @@
   
   
   <h3 class="article-title" itemprop="name">
+    <a href="/post/2017-09-17-data-generation-with-pyposim/" itemprop="url">Timeseries data generation with PyPoSim</a>
+  </h3>
+  
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+    <time datetime="2017-09-17 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      Sep 17, 2017
+    </time>
+  </span>
+
+  
+
+  
+  
+  
+  <span class="article-tags">
+    <i class="fa fa-tags"></i>
+    
+    <a href="/tags/python">Python</a
+    >
+    
+  </span>
+  
+  
+
+  
+
+</div>
+
+  <div class="article-style" itemprop="articleBody">
+    
+    
+
+<h2 id="grab-the-data">Grab the data</h2>
+
+<pre><code class="language-python">jR = requests.get(&quot;http://localhost:5000/masterdata/jR&quot;)
+masterdata = json.loads(jR.content)
+capacity = masterdata['capacity'] #100
+fluctuation = float(masterdata['fluctuationInPercentage'])/100 #10%
+</code></pre>
+
+<h2 id="read-the-csv">Read the CSV</h2>
+
+<pre><code class="language-python">df = pd.read_csv(&quot;telemetry.csv&quot;, delimiter=';')
+df = df.set_index(pd.DatetimeIndex(df['ts']).round(&quot;1S&quot;))
+ts = df.drop(['ts'], axis=1)
+</code></pre>
+
+<p>If you want to try it yourself, here is the link to the <a href="/post/2017-09-17-data-generation-with-pyposim/telemetry.csv">CSV</a></p>
+
+<pre><code class="language-python">power = ts[ts['metric']==&quot;power_output&quot;]
+setpoint = ts[ts['metric']==&quot;setpoint&quot;]
+setpoint['min_fluctuation'] = setpoint['value']-(capacity*fluctuation)
+setpoint['max_fluctuation'] = setpoint['value']+(capacity*fluctuation)
+dispatch = ts[ts['metric']==&quot;dispatch&quot;]
+</code></pre>
+
+<h2 id="let-s-see-what-comes-out">Let&rsquo;s see what comes out</h2>
+
+<p><img src="/post/2017-09-17-data-generation-with-pyposim/graph.png" alt="alt text" title="Logo Title Text 1" /></p>
+
+    
+  </div>
+  <p class="read-more">
+    <a href="/post/2017-09-17-data-generation-with-pyposim/" class="btn btn-primary btn-outline">
+      CONTINUE READING
+    </a>
+  </p>
+</div>
+
+      
+        
+        
+
+
+<div class="article-list-item" itemscope itemprop="blogPost">
+  
+  
+  <h3 class="article-title" itemprop="name">
     <a href="/post/2017-09-14-the-first-post/" itemprop="url">The First Post</a>
   </h3>
   
@@ -258,19 +353,24 @@ It will mainly be used to as a platform to publish
   <div class="col-xs-12 col-md-8">
     
 
+    
+    
+    <span id="default-project-filter" class="hidden">*</span>
+    
+
     <div class="project-toolbar">
       <div id="filters">
         <div class="btn-toolbar">
           <div class="btn-group">
-          
-            <a href="#" data-filter="*" class="btn btn-primary btn-large active">All</a>
-          
-            <a href="#" data-filter=".python" class="btn btn-primary btn-large">Python</a>
-          
-            <a href="#" data-filter=".scala" class="btn btn-primary btn-large">Scala</a>
-          
-            <a href="#" data-filter=".android" class="btn btn-primary btn-large">Android</a>
-          
+            
+              <a href="#" data-filter="*" class="btn btn-primary btn-large active">All</a>
+            
+              <a href="#" data-filter=".python" class="btn btn-primary btn-large">Python</a>
+            
+              <a href="#" data-filter=".scala" class="btn btn-primary btn-large">Scala</a>
+            
+              <a href="#" data-filter=".android" class="btn btn-primary btn-large">Android</a>
+            
           </div>
         </div>
       </div>
@@ -362,6 +462,18 @@ It will mainly be used to as a platform to publish
 
     
     <ul class="fa-ul">
+      
+      <li itemscope itemtype="http://schema.org/CreativeWork">
+  <i class="fa-li fa fa-comment-o pub-icon" aria-hidden="true"></i>
+  <span itemprop="name"><a href="/talk/ruhrpy2016/">Data Science with Python: From prototypes to production ready code</a></span>
+  <p>
+    Mar 29, 2017,
+    
+            ruhrPY
+    
+  </p>
+</li>
+
       
       <li itemscope itemtype="http://schema.org/CreativeWork">
   <i class="fa-li fa fa-comment-o pub-icon" aria-hidden="true"></i>
@@ -469,10 +581,9 @@ It will mainly be used to as a platform to publish
     
 
     
-    <ul class="fa-ul">
       
-      <li itemscope itemtype="http://schema.org/CreativeWork">
-  <i class="fa-li fa fa-file-text-o pub-icon" aria-hidden="true"></i>
+        <div class="pub-list-item" style="margin-bottom: 1rem" itemscope itemtype="http://schema.org/CreativeWork">
+  <i class="fa fa-file-text-o pub-icon" aria-hidden="true"></i>
   <span itemprop="name">Automatic Genre Determination of Web Content</span>
   <p>
 
@@ -494,11 +605,13 @@ It will mainly be used to as a platform to publish
 
 
 </p>
-</li>
+</div>
 
       
-      <li itemscope itemtype="http://schema.org/CreativeWork">
-  <i class="fa-li fa fa-file-text-o pub-icon" aria-hidden="true"></i>
+    
+      
+        <div class="pub-list-item" style="margin-bottom: 1rem" itemscope itemtype="http://schema.org/CreativeWork">
+  <i class="fa fa-file-text-o pub-icon" aria-hidden="true"></i>
   <span itemprop="name">Maschinelles Lernen zur Erkennung von SMS-Spam</span>
   <p>
 
@@ -520,10 +633,9 @@ It will mainly be used to as a platform to publish
 
 
 </p>
-</li>
+</div>
 
       
-    </ul>
     
 
   </div>

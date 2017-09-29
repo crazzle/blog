@@ -46,17 +46,17 @@
     
   
 
-  <link rel="alternate" href="/publication_types/1/index.xml" type="application/rss+xml" title="Plainpixels">
-  <link rel="feed" href="/publication_types/1/index.xml" type="application/rss+xml" title="Plainpixels">
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Plainpixels">
+  <link rel="feed" href="/index.xml" type="application/rss+xml" title="Plainpixels">
 
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
 
-  <link rel="canonical" href="/publication_types/1/">
+  <link rel="canonical" href="/post/2017-09-17-data-generation-with-pyposim/">
 
   
 
-  <title>1 | Plainpixels</title>
+  <title>Timeseries data generation with PyPoSim | Plainpixels</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
@@ -163,29 +163,104 @@
 </nav>
 
 
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
 
 
+  <div class="article-container">
+    <h1 itemprop="name">Timeseries data generation with PyPoSim</h1>
+    
 
-<div class="universal-wrapper">
+<div class="article-metadata">
 
-  <h1>1</h1>
+  <span class="article-date">
+    
+    <time datetime="2017-09-17 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      Sep 17, 2017
+    </time>
+  </span>
 
   
 
   
   
-  <div>
-    <h2><a href="/publication/genre-determination-ml/">Automatic Genre Determination of Web Content</a></h2>
-    <div class="article-style">
-      
-    </div>
-  </div>
+  
+  <span class="article-tags">
+    <i class="fa fa-tags"></i>
+    
+    <a href="/tags/python">Python</a
+    >
+    
+  </span>
+  
   
 
   
+  
 
+  
 
 </div>
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+<h2 id="grab-the-data">Grab the data</h2>
+
+<pre><code class="language-python">jR = requests.get(&quot;http://localhost:5000/masterdata/jR&quot;)
+masterdata = json.loads(jR.content)
+capacity = masterdata['capacity'] #100
+fluctuation = float(masterdata['fluctuationInPercentage'])/100 #10%
+</code></pre>
+
+<h2 id="read-the-csv">Read the CSV</h2>
+
+<pre><code class="language-python">df = pd.read_csv(&quot;telemetry.csv&quot;, delimiter=';')
+df = df.set_index(pd.DatetimeIndex(df['ts']).round(&quot;1S&quot;))
+ts = df.drop(['ts'], axis=1)
+</code></pre>
+
+<p>If you want to try it yourself, here is the link to the <a href="/post/2017-09-17-data-generation-with-pyposim/telemetry.csv">CSV</a></p>
+
+<pre><code class="language-python">power = ts[ts['metric']==&quot;power_output&quot;]
+setpoint = ts[ts['metric']==&quot;setpoint&quot;]
+setpoint['min_fluctuation'] = setpoint['value']-(capacity*fluctuation)
+setpoint['max_fluctuation'] = setpoint['value']+(capacity*fluctuation)
+dispatch = ts[ts['metric']==&quot;dispatch&quot;]
+</code></pre>
+
+<h2 id="let-s-see-what-comes-out">Let&rsquo;s see what comes out</h2>
+
+<p><img src="/post/2017-09-17-data-generation-with-pyposim/graph.png" alt="alt text" title="Logo Title Text 1" /></p>
+
+    </div>
+  </div>
+
+</article>
+
+
+
+
+<div class="container">
+  <nav>
+  <ul class="pager">
+    
+    <li class="previous"><a href="/post/2017-09-14-the-first-post/"><span
+      aria-hidden="true">&larr;</span> The First Post</a></li>
+    
+
+    
+  </ul>
+</nav>
+
+</div>
+
+<div class="article-container">
+  
+
+</div>
+
 <footer class="site-footer">
   <div class="container">
     <p class="powered-by">
