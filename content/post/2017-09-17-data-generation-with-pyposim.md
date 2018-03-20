@@ -14,8 +14,8 @@ of a powerplant.
 
 The code can be found in the [PyPoSim Github Repo](https://github.com/crazzle/PyPoSim)
 
-Using this project, let's generate some timeseries data, store it to a CSV and visualize it
-like real systems would visualize it!<!--more-->
+Using this project, let's generate some timeseries data, store it to a CSV and visualize it.
+<!--more-->
 
 ## The basics
 
@@ -34,6 +34,10 @@ pip install -r requirements.txt
 
 One plant is already existing by default with the ID `jR`. Doing a curl to request the masterdata for that plant will give 
 us some more detailed information about it: 
+
+```bash
+curl localhost:5000/jR
+```
 
 ```json
 {"fluctuationInPercentage": 10, "rampInSeconds": 5, "capacity": 100, "uid": "jR", "name": "Default"}
@@ -56,10 +60,10 @@ fluctuation = 10.0/100.0
 ## Read the CSV
 
 After a couple of minutes playing around with the UI and requesting the plant 
-to changes it's output (`dispatch`), the following [CSV](/post/2017-09-17-data-generation-with-pyposim/telemetry.csv) 
+to change it's output (`dispatch`), the following [CSV](/post/2017-09-17-data-generation-with-pyposim/telemetry.csv) 
 got generated.
 
-We can easily read it using Pandas, an awesome data analysis library for Python.
+We can easily read it using Pandas, a data analysis library for Python.
 If not already done, install it via pip.
 
 ```bash
@@ -73,8 +77,8 @@ import Pandas as pd
 df = pd.read_csv("telemetry.csv", delimiter=';')
 ```
 
-The data is represented as a dataframe, an array structure with the same schema as the CSV, except a newly generated
-index. This index is not needed, instead we want to use the timestamp as the index rounded to full seconds.
+The data is represented as a dataframe, an array structure with the same schema as the CSV. The newly generated
+index is not needed as we use the timestamp for this purpose.
 
 ```
 df = df.set_index(pd.DatetimeIndex(df['ts']).round("1S"))
@@ -84,7 +88,7 @@ ts = df.drop(['ts'], axis=1)
 ## Filter for the right information
 
 From now on the dataframe can be wrangled until everything is seperated nicely.
-The CSV schema is quite generic but narrow which leads to a lot of rows. From there
+The CSV schema is generic but narrow, which leads to a lot of rows. From there
 on we start separating different metrics (e.g. sensornames like power_output) into 
 individual timeseries.
 
