@@ -10,8 +10,8 @@ location = "Berlin, Germany"
 selected = false
 math = true
 
-url_pdf = ""
-url_slides = "resources/bbuzz_2018"
-url_video = ""
+url_pdf = "resources/bbuzz_2018.pdf"
+url_slides = "https://berlinbuzzwords.de/sites/berlinbuzzwords.de/files/media/documents/bbuzz_2018.pdf"
+url_video = "https://youtu.be/9mJ0C7KttYg"
 
 +++
