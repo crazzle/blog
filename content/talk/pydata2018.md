@@ -11,7 +11,7 @@ selected = false
 math = true
 
 url_pdf = "resources/pydata2018.pdf"
-url_slides = "resources/Production-Ready-Datascience.slides.html"
+url_slides = ""
 url_video = ""
 
 +++
