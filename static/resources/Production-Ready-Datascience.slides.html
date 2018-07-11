@@ -15,8 +15,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <!-- General and theme style sheets -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/reveal.js/2.6.2/css/reveal.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/reveal.js/2.6.2/css/theme/simple.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/reveal.css">
+<link rel="stylesheet" href="reveal.js/css/theme/simple.css" id="theme">
 
 <!-- If the query includes 'print-pdf', include the PDF print sheet -->
 <script>
@@ -24,14 +24,14 @@ if( window.location.search.match( /print-pdf/gi ) ) {
         var link = document.createElement( 'link' );
         link.rel = 'stylesheet';
         link.type = 'text/css';
-        link.href = 'https://cdn.jsdelivr.net/reveal.js/2.6.2/css/print/pdf.css';
+        link.href = 'reveal.js/css/print/pdf.css';
         document.getElementsByTagName( 'head' )[0].appendChild( link );
 }
 
 </script>
 
 <!--[if lt IE 9]>
-<script src="https://cdn.jsdelivr.net/reveal.js/2.6.2/lib/js/html5shiv.js"></script>
+<script src="reveal.js/lib/js/html5shiv.js"></script>
 <![endif]-->
 
 <!-- Loading the mathjax macro -->
@@ -11914,7 +11914,7 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-About-this-Workshop-"><center> About this Workshop </center><a class="anchor-link" href="#-About-this-Workshop-">&#182;</a></h1>
+<h1 id="About-this-Workshop">About this Workshop<a class="anchor-link" href="#About-this-Workshop">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -11922,11 +11922,14 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<center>Interactively build a model that differentiates between limes and bananas</center> 
-<center>Get a glimpse of production-readiness</center> 
-<center>Learn about Luigi pipelines and their main components</center>
-<center>Write your production ready pipeline</center>
-<center>Get an overview of luigis modules</center>
+<ul>
+<li>Interactively build a model that differentiates between limes and bananas</li>
+<li>Get a glimpse of production-readiness</li>
+<li>Learn about Luigi pipelines and their main components</li>
+<li>Write your production ready pipeline</li>
+<li>Get an overview of luigis modules</li>
+</ul>
+
 </div>
 </div>
 </div></section></section><section><section>
@@ -11934,7 +11937,7 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-Building-the-model-interactively-"><center> Building the model interactively </center><a class="anchor-link" href="#-Building-the-model-interactively-">&#182;</a></h1>
+<h1 id="Building-the-model-interactively">Building the model interactively<a class="anchor-link" href="#Building-the-model-interactively">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -11942,7 +11945,7 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="-Download-dataset-"><center> Download dataset </center><a class="anchor-link" href="#-Download-dataset-">&#182;</a></h2>
+<h2 id="Download-dataset">Download dataset<a class="anchor-link" href="#Download-dataset">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -11996,7 +11999,7 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-Explore-the-data-"><center> Explore the data </center><a class="anchor-link" href="#-Explore-the-data-">&#182;</a></h1>
+<h1 id="Explore-the-data">Explore the data<a class="anchor-link" href="#Explore-the-data">&#182;</a></h1>
 </div>
 </div>
 </div></section><section>
@@ -12153,7 +12156,7 @@ size   : 	982
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-Build-a-baseline-model-"><center> Build a baseline model </center><a class="anchor-link" href="#-Build-a-baseline-model-">&#182;</a></h1><h2 id="-Distinguish-Limes-from-Bananas-using-OpenCV-"><center> Distinguish Limes from Bananas using OpenCV </center><a class="anchor-link" href="#-Distinguish-Limes-from-Bananas-using-OpenCV-">&#182;</a></h2>
+<h1 id="Build-a-baseline-model">Build a baseline model<a class="anchor-link" href="#Build-a-baseline-model">&#182;</a></h1><h2 id="Distinguish-Limes-from-Bananas-using-OpenCV">Distinguish Limes from Bananas using OpenCV<a class="anchor-link" href="#Distinguish-Limes-from-Bananas-using-OpenCV">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -12207,7 +12210,7 @@ size   : 	982
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-Use-a-deeplearning-model-"><center> Use a deeplearning model </center><a class="anchor-link" href="#-Use-a-deeplearning-model-">&#182;</a></h1>
+<h1 id="Use-a-deeplearning-model">Use a deeplearning model<a class="anchor-link" href="#Use-a-deeplearning-model">&#182;</a></h1>
 </div>
 </div>
 </div></section><section>
@@ -12215,7 +12218,7 @@ size   : 	982
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="-Create-the-model-using-Keras-"><center> Create the model using Keras </center><a class="anchor-link" href="#-Create-the-model-using-Keras-">&#182;</a></h2>
+<h2 id="Create-the-model-using-Keras">Create the model using Keras<a class="anchor-link" href="#Create-the-model-using-Keras">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -12249,7 +12252,7 @@ size   : 	982
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="-Train-the-model-"><center> Train the model </center><a class="anchor-link" href="#-Train-the-model-">&#182;</a></h2>
+<h2 id="Train-the-model">Train the model<a class="anchor-link" href="#Train-the-model">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -12305,7 +12308,7 @@ Epoch 2/2
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="-Evaluate-the-model-"><center> Evaluate the model </center><a class="anchor-link" href="#-Evaluate-the-model-">&#182;</a></h2>
+<h2 id="Evaluate-the-model">Evaluate the model<a class="anchor-link" href="#Evaluate-the-model">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -12345,7 +12348,7 @@ Epoch 2/2
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-It-works,-now-DEPLOY-it!-"><center> It works, now DEPLOY it! </center><a class="anchor-link" href="#-It-works,-now-DEPLOY-it!-">&#182;</a></h1>
+<h1 id="It-works,-now-DEPLOY-it!">It works, now DEPLOY it!<a class="anchor-link" href="#It-works,-now-DEPLOY-it!">&#182;</a></h1>
 </div>
 </div>
 </div></section><section>
@@ -12362,7 +12365,13 @@ Epoch 2/2
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-A-bit-about-Luigi-"><center> A bit about Luigi </center><a class="anchor-link" href="#-A-bit-about-Luigi-">&#182;</a></h1><center> Luigi helps to stitch long running tasks together into pipelines </center><center> It contains a wide toolbox of task templates (e.g. Hive, Pig, Spark, Python) </center><h1 id="-How-to-compose-workflows?-"><center> How to compose workflows? </center><a class="anchor-link" href="#-How-to-compose-workflows?-">&#182;</a></h1><center> A workflow consists of Tasks, Targets and Parameters  </center><center> Targets correspond to a file or a database entry or some other kind of checkpoint </center><center> Tasks consume Targets of other tasks, run a computation, then output a target </center><center> Parameters take care of task parameterization </center>
+<h1 id="A-bit-about-Luigi">A bit about Luigi<a class="anchor-link" href="#A-bit-about-Luigi">&#182;</a></h1><p>Luigi helps to stitch long running tasks together into pipelines</p>
+<p>It contains a wide toolbox of task templates (e.g. Hive, Pig, Spark, Python)</p>
+<h1 id="How-to-compose-workflows?">How to compose workflows?<a class="anchor-link" href="#How-to-compose-workflows?">&#182;</a></h1><p>A workflow consists of Tasks, Targets and Parameters</p>
+<p>Targets correspond to a file or a database entry or some other kind of checkpoint</p>
+<p>Tasks consume Targets of other tasks, run a computation, then output a target</p>
+<p>Parameters take care of task parameterization</p>
+
 </div>
 </div>
 </div></section><section>
@@ -12379,7 +12388,21 @@ Epoch 2/2
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-How-would-our-Workflow-look-like?-"><center> How would our Workflow look like? </center><a class="anchor-link" href="#-How-would-our-Workflow-look-like?-">&#182;</a></h1><center> Download the dataset </center><center> Extract the data </center><center> Create a preprocessing configuration </center><center> Run the baseline validation </center><center> Train the model </center><center> Evaluate the model </center>
+<h1 id="How-would-our-Workflow-look-like?">How would our Workflow look like?<a class="anchor-link" href="#How-would-our-Workflow-look-like?">&#182;</a></h1><ul>
+<li><p>Download the dataset</p>
+</li>
+<li><p>Extract the data</p>
+</li>
+<li><p>Create a preprocessing configuration</p>
+</li>
+<li><p>Run the baseline validation</p>
+</li>
+<li><p>Train the model</p>
+</li>
+<li><p>Evaluate the model</p>
+</li>
+</ul>
+
 </div>
 </div>
 </div></section><section>
@@ -12404,8 +12427,8 @@ require(
       waitSeconds: 15
     },
     [
-      "https://cdn.jsdelivr.net/reveal.js/2.6.2/lib/js/head.min.js",
-      "https://cdn.jsdelivr.net/reveal.js/2.6.2/js/reveal.js"
+      "reveal.js/lib/js/head.min.js",
+      "reveal.js/js/reveal.js"
     ],
 
     function(head, Reveal){
@@ -12420,9 +12443,9 @@ require(
 
             // Optional libraries used to extend on reveal.js
             dependencies: [
-                { src: "https://cdn.jsdelivr.net/reveal.js/2.6.2/lib/js/classList.js",
+                { src: "reveal.js/lib/js/classList.js",
                   condition: function() { return !document.body.classList; } },
-                { src: "https://cdn.jsdelivr.net/reveal.js/2.6.2/plugin/notes/notes.js",
+                { src: "reveal.js/plugin/notes/notes.js",
                   async: true,
                   condition: function() { return !!document.body.classList; } }
             ]
